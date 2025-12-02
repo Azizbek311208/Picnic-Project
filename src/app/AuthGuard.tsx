@@ -5,7 +5,11 @@ import { useRouter, usePathname } from "next/navigation";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "@/firebase/firebase.config";
 
-export default function AuthGuard({ children }) {
+interface AuthGuardProps {
+  children: React.ReactNode;
+}
+
+export default function AuthGuard({ children }: AuthGuardProps) {
   const router = useRouter();
   const path = usePathname();
 
