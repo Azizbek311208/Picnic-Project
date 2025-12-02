@@ -1,0 +1,264 @@
+@mixin media($max) {
+  @media (max-width: $max) {
+    @content;
+  }
+}
+
+.bigOne {
+  display: flex;
+  justify-content: center;
+  margin-top: 145px;
+
+  .mainWrapper {
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    @include media(1290px) {
+      padding: 0 10px;
+      gap: 10px;
+    }
+
+
+    .leftMain {
+      max-width: 596px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      h1 {
+        max-width: 596px;
+        width: 100%;
+        font-size: 60px;
+        font-weight: 700;
+        line-height: 65px;
+
+        @include media(1290px) {
+          max-width: 459px;
+          font-size: 50px;
+        }
+      }
+
+      p {
+        margin-top: 10px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        color: #00000099;
+        max-width: 545px;
+
+        @include media(1290px) {
+          font-size: 13px;
+        }
+      }
+
+      .buttonOne {
+        width: 210px;
+        height: 50px;
+        margin-top: 10px;
+        border-radius: 62px;
+        background-color: #245d30;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+      }
+
+  
+      .numbersBelow {
+        margin-top: 30px;
+        display: flex;
+        width: 596px;
+        justify-content: space-between;
+
+        @include media(1290px) {
+          width: 459px;
+        }
+
+        .firstNumber,
+        .secondNumber,
+        .thirdNumber {
+          h2 {
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 100%;
+
+            span {
+              color: #245d30;
+            }
+          }
+
+          p {
+            font-size: 16px;
+            font-weight: 400;
+            color: #00000099;
+            line-height: 22px;
+          }
+        }
+      }
+    }
+
+    /* RIGHT SIDE IMAGE */
+    .rightMain {
+      img {
+        width: 100%;
+        max-width: 550px;
+      }
+    }
+  }
+}
+
+
+@include media(992px) {
+  .bigOne {
+    margin-top: 90px;
+  }
+
+  .mainWrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+
+    .leftMain {
+      align-items: center;
+
+      h1 {
+        font-size: 45px;
+        line-height: 55px;
+        max-width: 90%;
+      }
+
+      p {
+        font-size: 15px;
+        max-width: 90%;
+      }
+
+      .numbersBelow {
+        width: 100%;
+        justify-content: center;
+        gap: 30px;
+
+        hr {
+          display: none;
+        }
+      }
+    }
+
+    .rightMain img {
+      max-width: 430px;
+    }
+  }
+}
+
+
+@include media(576px) {
+  .bigOne {
+    margin-top: 60px;
+  }
+
+  .mainWrapper {
+    .leftMain {
+
+      h1 {
+        font-size: 32px !important;
+        line-height: 40px !important;
+      }
+
+      p {
+        font-size: 14px !important;
+      }
+
+      .buttonOne {
+        width: 170px !important;
+        height: 45px !important;
+        font-size: 15px !important;
+      }
+
+
+      .numbersBelow {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 25px !important;
+        margin-top: 15px !important;
+
+        .firstNumber,
+        .secondNumber,
+        .thirdNumber {
+          text-align: center !important;
+
+          h2 {
+            font-size: 24px !important;
+            line-height: 26px !important;
+            font-weight: 700 !important;
+
+            span {
+              color: #245d30 !important;
+            }
+          }
+
+          p {
+            font-size: 12px !important;
+            line-height: 16px !important;
+            color: #00000099 !important;
+          }
+        }
+      }
+    }
+
+  
+    .rightMain img {
+      max-width: 350px !important;
+    }
+  }
+}
+
+@include media(380px) {
+  .leftMain {
+    h1 {
+      font-size: 26px !important;
+      line-height: 32px !important;
+    }
+
+    p {
+      font-size: 13px !important;
+    }
+
+    .buttonOne {
+      width: 150px !important;
+      height: 40px !important;
+    }
+
+    .numbersBelow {
+      h2 {
+        font-size: 20px !important;
+        line-height: 22px !important;
+      }
+
+      p {
+        font-size: 11px !important;
+        line-height: 14px !important;
+      }
+
+      gap: 18px !important;
+    }
+  }
+
+  .rightMain img {
+    max-width: 280px !important;
+  }
+}
+
+
+@include media(456px) {
+  .leftMain {
+    h1 {
+      font-size: 28px !important;
+      line-height: 34px !important;
+    }
+  }
+}

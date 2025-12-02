@@ -1,0 +1,180 @@
+.aloqaContainer {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
+
+  .innerAloqa {
+    max-width: 1640px;
+    width: 100%;
+
+    .imgWrapper {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .bottomInner {
+      display: flex;
+      justify-content: center;
+
+      .bottomPart {
+        margin-top: 80px;
+        display: flex;
+        max-width: 1240px;
+        width: 100%;
+        justify-content: space-between;
+        gap: 40px;
+
+
+        .leftSide {
+          max-width: 570px;
+          width: 100%;
+
+          h2 {
+            font-weight: 700;
+            font-size: 50px;
+            color: #011334;
+          }
+
+          p {
+            margin-top: 28px;
+            font-weight: 400;
+            font-size: 16px;
+            max-width: 360px;
+            color: #011334;
+          }
+
+          .leftBottom {
+            max-width: 365px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 31px;
+
+            .firstP,
+            .secondP,
+            .thirdP {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+
+              h4 {
+                font-weight: 700;
+                font-size: 18px;
+                color: #011334;
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+
+    
+        .rightSide {
+          border: 1px solid #bdbdbd;
+          border-radius: 30px;
+          display: flex;
+          padding: 50px;
+          flex-direction: column;
+          max-width: 565px;
+          width: 100%;
+
+          .firstRow {
+            display: flex;
+            gap: 21px;
+
+            input {
+              width: 222px;
+              max-width: 100%;
+            }
+          }
+
+          .bir,
+          .ikki,
+          .uch {
+            margin-top: 20px;
+            width: 465px;
+            max-width: 100%;
+          }
+
+          .bigBoy {
+            margin-top: 40px;
+            width: 465px;
+            max-width: 100%;
+            background-color: #245d30;
+            color: white;
+            display: flex;        
+            align-items: center;    
+            justify-content: center;
+            height: 45px;
+            border-radius: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+@media (max-width: 1024px) {
+  .bottomPart {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center;
+
+    .leftSide {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .rightSide {
+      padding: 35px !important;
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  .bottomPart {
+    margin-top: 40px !important;
+  }
+
+  .rightSide {
+    padding: 25px !important;
+
+    .firstRow {
+      flex-direction: column !important;
+
+      input {
+        width: 100% !important;
+      }
+    }
+
+    .bir,
+    .ikki,
+    .uch,
+    .bigBoy {
+      width: 100% !important;
+    }
+  }
+
+  .leftSide h2 {
+    font-size: 32px !important;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .rightSide {
+    padding: 20px !important;
+  }
+
+  .leftSide h2 {
+    font-size: 28px !important;
+  }
+}

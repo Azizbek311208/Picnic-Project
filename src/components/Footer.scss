@@ -1,0 +1,132 @@
+@mixin media($max) {
+  @media (max-width: $max) {
+    @content;
+  }
+}
+
+.bigBoy {
+  display: flex;
+  margin-top: 120px;
+  align-items: center;
+  flex-direction: column;
+  background-color: #245d30;
+  width: 100%;
+  overflow-x: hidden; 
+  .OverallFooter {
+    max-width: 1240px;
+    width: 100%;
+    margin-top: 78px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap; 
+
+    @include media(768px) {
+      flex-wrap: wrap;
+      gap: 25px;
+      justify-content: center;
+    }
+
+    @include media(460px) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 28px;
+      margin-top: 40px;
+    }
+
+    .ImgPart {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+
+      @include media(460px) {
+        align-items: center;
+        gap: 18px;
+      }
+
+      img {
+        width: 90px;
+        height: 90px;
+
+        @include media(460px) {
+          width: 80px;
+          height: 80px;
+        }
+      }
+
+      .InstaTube {
+        width: 148px;
+        display: flex;
+        justify-content: space-between;
+
+        @include media(460px) {
+          width: 120px;
+        }
+
+        button {
+          width: 28px;
+          height: 28px;
+          border-radius: 50%;
+          background-color: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+
+    .Kompaniya {
+      h3 {
+        font-size: 16px;
+        font-weight: 500;
+        color: white;
+      }
+
+      @include media(460px) {
+        text-align: center;
+        width: 100%;
+      }
+
+      .mayda {
+        margin-top: 18px;
+
+        p {
+          color: #ffffff99;
+          font-size: 16px;
+          font-weight: 400;
+
+          @include media(460px) {
+            font-size: 15px;
+            line-height: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  .lastThing {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1240px;
+    width: 100%;
+    margin-top: 40px;
+    padding: 0 12px;
+
+    span {
+      color: #ffffff99;
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    @include media(460px) {
+      flex-direction: column;
+      gap: 12px;
+      text-align: center;
+
+      img {
+        width: 160px;
+      }
+    }
+  }
+}

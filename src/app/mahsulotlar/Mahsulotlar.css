@@ -1,0 +1,129 @@
+.overallProduct {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+.overallProduct .mainWrapper {
+  max-width: 1440px;
+  width: 100%;
+  margin-top: 25px;
+}
+.overallProduct .mainWrapper h1 {
+  font-weight: 700;
+  font-size: 50px;
+  color: black;
+  text-align: center;
+}
+.overallProduct .mainWrapper .categoryPart {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0 5px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+.overallProduct .mainWrapper .categoryPart .firstCat {
+  flex: 0 0 auto;
+  display: flex;
+  border: 1px solid #ccc;
+  gap: 6px;
+  align-items: center;
+  padding: 10px 18px;
+  cursor: pointer;
+  border-radius: 30px;
+  background: white;
+  transition: 0.3s;
+}
+.overallProduct .mainWrapper .categoryPart .firstCat:hover {
+  background: #f4f4f4;
+}
+.overallProduct .mainWrapper .categoryPart .firstCat img {
+  width: 24px;
+  height: 24px;
+}
+.overallProduct .mainWrapper .categoryPart::-webkit-scrollbar {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .overallProduct .mainWrapper .categoryPart {
+    justify-content: space-between;
+  }
+}
+@media (max-width: 768px) {
+  .overallProduct .mainWrapper .categoryPart {
+    justify-content: flex-start;
+    gap: 10px;
+    padding-left: 10px;
+  }
+}
+@media (max-width: 480px) {
+  .overallProduct .mainWrapper .categoryPart {
+    gap: 8px;
+    padding-left: 8px;
+  }
+}
+.overallProduct .mainWrapper .productsGrid {
+  margin-top: 50px;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+.overallProduct .mainWrapper .productsGrid .productCard {
+  max-width: 295px;
+  margin: 0 auto;
+}
+.overallProduct .mainWrapper .productsGrid .productCard .imageWrapper {
+  width: 100%;
+  height: 298px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  padding: 25px 23px;
+}
+.overallProduct .mainWrapper .productsGrid .productCard p {
+  font-weight: 700;
+  font-size: 20px;
+  color: black;
+}
+.overallProduct .mainWrapper .productsGrid .productCard .rating {
+  margin-top: 10px;
+}
+.overallProduct .mainWrapper .productsGrid .productCard .bottomPart {
+  margin-top: 8px;
+}
+.overallProduct .mainWrapper .productsGrid .productCard .bottomPart h4 {
+  color: black;
+  font-size: 24px;
+  font-weight: 700;
+}
+.overallProduct .mainWrapper .productsGrid .productCard .bottomPart .cartBtn:hover {
+  transform: scale(1.4);
+  transition: all 100ms ease-in-out;
+}
+@media (max-width: 1024px) {
+  .overallProduct .mainWrapper .productsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .overallProduct .mainWrapper .productsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .overallProduct .mainWrapper .categoryPart {
+    justify-content: flex-start;
+    gap: 10px;
+  }
+}
+@media (max-width: 480px) {
+  .overallProduct .mainWrapper .productsGrid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .overallProduct .mainWrapper .categoryPart {
+    gap: 8px;
+  }
+}/*# sourceMappingURL=Mahsulotlar.css.map */

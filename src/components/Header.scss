@@ -1,0 +1,154 @@
+@mixin media($max) {
+  @media (max-width: $max) {
+    @content;
+  }
+}
+
+.bigWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .header-container {
+    max-width: 1440px;
+    width: 100%;
+    min-height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    gap: 40px;
+
+    .leftPart {
+      display: flex;
+      width: 681px;
+      justify-content: space-between;
+      align-items: center;
+
+      @include media(800px) {
+        width: 100px;
+        gap: 10px;
+        padding-left: 3px;
+      }
+
+      img {
+        width: 60px;
+        height: 60px;
+
+        @include media(350px) {
+          width: 45px;
+          height: 45px;
+        }
+      }
+
+      ul {
+        display: flex;
+        gap: 35px;
+        align-items: center;
+        margin-bottom: 0;
+
+        li {
+          font-weight: 400;
+          font-size: 16px;
+          cursor: pointer;
+          color: #000000;
+        }
+
+        @include media(800px) {
+          display: none;
+        }
+      }
+    }
+
+    .rightPart {
+      width: 318px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      position: relative;
+
+      .searchWrapper {
+        flex: 1;
+        position: relative;
+
+        input {
+          width: 100%;
+          height: 38px;
+          padding: 10px 40px 10px 15px;
+          background-color: #f0f0f0;
+          border-radius: 62px;
+          font-size: 14px;
+          border: none;
+          outline: none;
+        }
+
+        .searchIcon {
+          position: absolute;
+          right: 10px;
+          top: 50%;
+          transform: translateY(-50%);
+          font-size: 18px;
+          cursor: pointer;
+          color: #245d30;
+        }
+      }
+
+      .logocha {
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+      }
+
+      .hamburger {
+        display: none;
+        position: relative;
+
+        .mobileMenu {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          top: 100%;
+          right: 0;
+          width: 200px;
+          background: #fff;
+          padding: 10px;
+          border-radius: 8px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+          li {
+            margin-bottom: 8px;
+            font-size: 16px;
+            color: #000;
+            cursor: pointer;
+            transition: color 0.2s ease;
+
+            &:hover {
+              color: #245d30;
+            }
+          }
+        }
+      }
+
+      @include media(800px) {
+        width: auto;
+        gap: 8px;
+
+        .searchWrapper {
+          flex: 3;
+        }
+
+        .hamburger {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .lineLong {
+    margin-top: 10px;
+    max-width: 1440px;
+    width: 100%;
+    height: 0;
+    border: 1px solid #245d3033;
+  }
+}

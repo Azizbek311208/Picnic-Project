@@ -1,0 +1,96 @@
+@mixin media($max) {
+  @media (max-width: $max) {
+    @content;
+  }
+}
+
+.questionWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 90px;
+  @include media(670px) {
+    margin-top: 56px;
+  }
+  .questionInner {
+    max-width: 869px;
+    width: 100%;
+    padding-top: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include media(670px) {
+      padding-top: 10px;
+    }
+    h1 {
+      font-weight: 700;
+      font-size: 50px;
+      line-height: 64px;
+      color: #151515;
+      text-align: center;
+      @include media(670px) {
+        font-size: 38px;
+      }
+      @include media(460px) {
+        font-size: 25px;
+      }
+    }
+    .questions {
+      margin-top: 70px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      width: 100%;
+      @include media(460px) {
+        padding: 0 15px 0 15px !important;
+      }
+      .questionItem {
+        max-width: 792px;
+        width: 100%;
+        background-color: #f5f5f5;
+        @include media(460px) {
+          padding-top: 10px;
+          padding-bottom: 10px;
+          padding-left: 10px;
+        }
+        padding: 20px 24px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.25s ease;
+        &:hover {
+          background-color: #eeeeee;
+        }
+        .header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        h2 {
+          font-size: 17px;
+          font-weight: 600;
+          color: #151515;
+          @include media(460px) {
+            font-size: 12px;
+          }
+        }
+        p {
+          margin-top: 12px;
+          font-size: 15px;
+          line-height: 22px;
+          color: #333;
+          transition: all 0.3s ease;
+          @include media(460px) {
+            font-size: 9px;
+          }
+        }
+      }
+    }
+  }
+}
+.rotate {
+  transform: rotate(45deg);
+  transition: transform 0.25s ease;
+}
+.rotate-back {
+  transform: rotate(0deg);
+  transition: transform 0.25s ease;
+}

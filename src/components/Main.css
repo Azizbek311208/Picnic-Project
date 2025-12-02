@@ -1,0 +1,217 @@
+.bigOne {
+  display: flex;
+  justify-content: center;
+  margin-top: 145px;
+}
+.bigOne .mainWrapper {
+  max-width: 1440px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  /* RIGHT SIDE IMAGE */
+}
+@media (max-width: 1290px) {
+  .bigOne .mainWrapper {
+    padding: 0 10px;
+    gap: 10px;
+  }
+}
+.bigOne .mainWrapper .leftMain {
+  max-width: 596px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.bigOne .mainWrapper .leftMain h1 {
+  max-width: 596px;
+  width: 100%;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 65px;
+}
+@media (max-width: 1290px) {
+  .bigOne .mainWrapper .leftMain h1 {
+    max-width: 459px;
+    font-size: 50px;
+  }
+}
+.bigOne .mainWrapper .leftMain p {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: rgba(0, 0, 0, 0.6);
+  max-width: 545px;
+}
+@media (max-width: 1290px) {
+  .bigOne .mainWrapper .leftMain p {
+    font-size: 13px;
+  }
+}
+.bigOne .mainWrapper .leftMain .buttonOne {
+  width: 210px;
+  height: 50px;
+  margin-top: 10px;
+  border-radius: 62px;
+  background-color: #245d30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.bigOne .mainWrapper .leftMain .numbersBelow {
+  margin-top: 30px;
+  display: flex;
+  width: 596px;
+  justify-content: space-between;
+}
+@media (max-width: 1290px) {
+  .bigOne .mainWrapper .leftMain .numbersBelow {
+    width: 459px;
+  }
+}
+.bigOne .mainWrapper .leftMain .numbersBelow .firstNumber h2,
+.bigOne .mainWrapper .leftMain .numbersBelow .secondNumber h2,
+.bigOne .mainWrapper .leftMain .numbersBelow .thirdNumber h2 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 100%;
+}
+.bigOne .mainWrapper .leftMain .numbersBelow .firstNumber h2 span,
+.bigOne .mainWrapper .leftMain .numbersBelow .secondNumber h2 span,
+.bigOne .mainWrapper .leftMain .numbersBelow .thirdNumber h2 span {
+  color: #245d30;
+}
+.bigOne .mainWrapper .leftMain .numbersBelow .firstNumber p,
+.bigOne .mainWrapper .leftMain .numbersBelow .secondNumber p,
+.bigOne .mainWrapper .leftMain .numbersBelow .thirdNumber p {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 22px;
+}
+.bigOne .mainWrapper .rightMain img {
+  width: 100%;
+  max-width: 550px;
+}
+
+@media (max-width: 992px) {
+  .bigOne {
+    margin-top: 90px;
+  }
+  .mainWrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+  }
+  .mainWrapper .leftMain {
+    align-items: center;
+  }
+  .mainWrapper .leftMain h1 {
+    font-size: 45px;
+    line-height: 55px;
+    max-width: 90%;
+  }
+  .mainWrapper .leftMain p {
+    font-size: 15px;
+    max-width: 90%;
+  }
+  .mainWrapper .leftMain .numbersBelow {
+    width: 100%;
+    justify-content: center;
+    gap: 30px;
+  }
+  .mainWrapper .leftMain .numbersBelow hr {
+    display: none;
+  }
+  .mainWrapper .rightMain img {
+    max-width: 430px;
+  }
+}
+@media (max-width: 576px) {
+  .bigOne {
+    margin-top: 60px;
+  }
+  .mainWrapper .leftMain h1 {
+    font-size: 32px !important;
+    line-height: 40px !important;
+  }
+  .mainWrapper .leftMain p {
+    font-size: 14px !important;
+  }
+  .mainWrapper .leftMain .buttonOne {
+    width: 170px !important;
+    height: 45px !important;
+    font-size: 15px !important;
+  }
+  .mainWrapper .leftMain .numbersBelow {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 25px !important;
+    margin-top: 15px !important;
+  }
+  .mainWrapper .leftMain .numbersBelow .firstNumber,
+  .mainWrapper .leftMain .numbersBelow .secondNumber,
+  .mainWrapper .leftMain .numbersBelow .thirdNumber {
+    text-align: center !important;
+  }
+  .mainWrapper .leftMain .numbersBelow .firstNumber h2,
+  .mainWrapper .leftMain .numbersBelow .secondNumber h2,
+  .mainWrapper .leftMain .numbersBelow .thirdNumber h2 {
+    font-size: 24px !important;
+    line-height: 26px !important;
+    font-weight: 700 !important;
+  }
+  .mainWrapper .leftMain .numbersBelow .firstNumber h2 span,
+  .mainWrapper .leftMain .numbersBelow .secondNumber h2 span,
+  .mainWrapper .leftMain .numbersBelow .thirdNumber h2 span {
+    color: #245d30 !important;
+  }
+  .mainWrapper .leftMain .numbersBelow .firstNumber p,
+  .mainWrapper .leftMain .numbersBelow .secondNumber p,
+  .mainWrapper .leftMain .numbersBelow .thirdNumber p {
+    font-size: 12px !important;
+    line-height: 16px !important;
+    color: rgba(0, 0, 0, 0.6) !important;
+  }
+  .mainWrapper .rightMain img {
+    max-width: 350px !important;
+  }
+}
+@media (max-width: 380px) {
+  .leftMain h1 {
+    font-size: 26px !important;
+    line-height: 32px !important;
+  }
+  .leftMain p {
+    font-size: 13px !important;
+  }
+  .leftMain .buttonOne {
+    width: 150px !important;
+    height: 40px !important;
+  }
+  .leftMain .numbersBelow {
+    gap: 18px !important;
+  }
+  .leftMain .numbersBelow h2 {
+    font-size: 20px !important;
+    line-height: 22px !important;
+  }
+  .leftMain .numbersBelow p {
+    font-size: 11px !important;
+    line-height: 14px !important;
+  }
+  .rightMain img {
+    max-width: 280px !important;
+  }
+}
+@media (max-width: 456px) {
+  .leftMain h1 {
+    font-size: 28px !important;
+    line-height: 34px !important;
+  }
+}/*# sourceMappingURL=Main.css.map */

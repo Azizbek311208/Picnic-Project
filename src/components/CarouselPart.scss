@@ -1,0 +1,92 @@
+@mixin media($max) {
+  @media (max-width: $max) {
+    @content;
+  }
+}
+
+.CarouselPartContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
+
+  .OverallPart {
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    h1 {
+      font-size: 55px;
+      font-style: bold;
+      font-weight: 700;
+      color: black;
+      text-align: center;
+      padding-left: 60px;
+      @include media(768px) {
+        font-size: 36px;
+        padding: 0 10px 0 10px;
+      }
+      @include media(460px) {
+        font-size: 25px;
+        padding: 0 10px 0 10px;
+      }
+    }
+    .carousel {
+      overflow-x: auto;
+      display: flex;
+      width: 100%;
+      &:hover {
+        .sharhlar {
+          animation-play-state: paused;
+          cursor: pointer;
+        }
+      }
+
+      .sharhlar {
+        animation: spin 15s infinite linear;
+        display: flex;
+        margin-top: 35px;
+        gap: 20px;
+
+        padding-right: 20px;
+        .box {
+          width: 400px;
+          height: 239px;
+          padding: 28px 32px 50px 32px;
+          border: 1px solid #0000001a;
+          border-radius: 20px;
+          @include media(460px) {
+            width: 347px;
+            height: 201px;
+            padding: 20px 16px 20px 16px;
+          }
+          .salah {
+            margin-top: 15px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            h5 {
+              margin-bottom: 0;
+              font-size: 20px;
+              font-weight: 700;
+            }
+            .iconcha {
+              font-size: 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+@keyframes spin {
+  from {
+    translate: 0;
+  }
+  to {
+    translate: -100%;
+  }
+}

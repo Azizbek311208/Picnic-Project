@@ -1,0 +1,130 @@
+.blog-page {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 90px;
+
+  .textPart {
+    max-width: 892px;
+    text-align: center;
+
+    h2 {
+      font-size: 50px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      color: #000;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 25px;
+      color: #4f4f4f;
+      max-width: 732px;
+      margin: 0 auto;
+    }
+  }
+
+  .blog-grid {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    width: 100%;
+    max-width: 1440px;
+  }
+
+  .blog-card {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.06);
+    transition: all 0.2s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+    }
+
+    img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+    }
+
+    h3 {
+      padding: 15px 20px 0;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 26px;
+      color: #000;
+    }
+
+    p {
+      padding: 10px 20px 20px;
+      font-size: 13px;
+      color: #6f6f6f;
+      background: #f6f6f6;
+      border-radius: 12px;
+      display: inline-block;
+      margin: 15px 20px 20px;
+    }
+  }
+}
+
+
+@media (max-width: 1200px) {
+  .blog-page {
+    .blog-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-page {
+    margin-top: 60px;
+
+    .textPart h2 {
+      font-size: 36px;
+    }
+
+    .textPart p {
+      font-size: 16px;
+    }
+
+    .blog-grid {
+      grid-template-columns: 1fr;
+      gap: 28px;
+      padding: 0 20px;
+    }
+
+    .blog-card img {
+      height: 200px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-page {
+    .textPart h2 {
+      font-size: 30px;
+    }
+
+    .textPart p {
+      font-size: 15px;
+    }
+
+    .blog-card h3 {
+      font-size: 16px;
+    }
+
+    .blog-card img {
+      height: 170px;
+    }
+
+    .blog-card p {
+      font-size: 12px;
+      margin: 10px 16px 16px;
+    }
+  }
+}
