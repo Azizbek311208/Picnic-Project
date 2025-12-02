@@ -3,30 +3,22 @@ import { Product } from "../../../types";
 
 export type CartItem = Product;
 
-
-const getInitialCart = (): CartItem[] => {
-  if (typeof window !== "undefined") {
-    try {
-      return JSON.parse(localStorage.getItem("cart") || "[]");
-    } catch {
-      return [];
-    }
-  }
-  return [];
-};
-
 const saveCart = (cart: CartItem[]) => {
   if (typeof window !== "undefined") {
     localStorage.setItem("cart", JSON.stringify(cart));
   }
 };
 
-const initialState: CartItem[] = getInitialCart();
+const initialState: CartItem[] = []; 
 
 const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
+    setCart: (_, action: PayloadAction<CartItem[]>) => {
+      return action.payload;
+    },
+
     addToCart: (
       state,
       action: PayloadAction<{ product: Product; quantity: number }>
@@ -39,7 +31,6 @@ const cartSlice = createSlice({
       } else {
         state.push({ ...product, quantity });
       }
-
       saveCart(state);
     },
 
@@ -74,7 +65,7 @@ const cartSlice = createSlice({
   },
 });
 
-export const { addToCart, increase, decrease, remove, clear } =
+export const { addToCart, increase, decrease, remove, clear, setCart } =
   cartSlice.actions;
 
 export default cartSlice.reducer;
