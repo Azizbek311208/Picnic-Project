@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import Rodal from "rodal";
 import "rodal/lib/rodal.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min.js";
+
 import Sidebar from "../Sidebar";
 import {
   useAddProductsMutation,
@@ -25,6 +25,7 @@ import { Product } from "../../../../types";
 import { FiMenu } from "react-icons/fi";
 
 const AdminProduct = () => {
+  
   const { data: products = [] } = useFetchProductsQuery(undefined);
   const [addPost] = useAddProductsMutation();
   const [editPost] = useEditProductMutation();

@@ -12,7 +12,7 @@ const Main = () => {
             anjomlarigacha, hammasi sizning tajribangizni yuksaltirish uchun.
           </p>
           <div className="buttonOne hover:opacity-75 cursor-pointer ">
-            <Link href={"/order"} className="text-decoration-none text-white"> Xarid qiling</Link>
+            <Link href={"/mahsulotlar"} className="text-decoration-none text-white"> Xarid qiling</Link>
           </div>
           <div className="numbersBelow">
             <div className="firstNumber">

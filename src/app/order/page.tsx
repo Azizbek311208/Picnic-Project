@@ -4,7 +4,7 @@ import { useAppDispatch, useAppSelector } from "@/(redux)/hooks";
 import "rodal/lib/rodal.css";
 import "./Order.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min.js";
+
 import { Product } from "../../../types";
 import { MdDelete } from "react-icons/md";
 import {
