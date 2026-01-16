@@ -1,19 +1,25 @@
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 import { Product } from "../../../types";
 
-export type CartItem = Product;
+export type CartItem = Product & { quantity: number };
 
-const loadCart = (): CartItem[] =>
-  JSON.parse(localStorage.getItem("cart")! || "[]");
-
+// Helper: only run localStorage in the browser
 const saveCart = (cart: CartItem[]) => {
-  localStorage.setItem("cart", JSON.stringify(cart));
+  if (typeof window !== "undefined") {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }
 };
+
+const initialState: CartItem[] = []; // empty for SSR
 
 const cartSlice = createSlice({
   name: "cart",
-  initialState: loadCart(),
+  initialState,
   reducers: {
+    setCart: (state, action: PayloadAction<CartItem[]>) => {
+      return action.payload; // used to hydrate from localStorage
+    },
+
     addToCart: (
       state,
       action: PayloadAction<{ product: Product; quantity: number }>
@@ -61,6 +67,7 @@ const cartSlice = createSlice({
   },
 });
 
-export const { addToCart, increase, decrease, remove, clear } =
+export const { addToCart, increase, decrease, remove, clear, setCart } =
   cartSlice.actions;
+
 export default cartSlice.reducer;
