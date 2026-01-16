@@ -74,7 +74,7 @@ export default function Mahsulotlar() {
               <Link href={`mahsulotlar/${product.id}`}>
                 <div className="w-full h-52  rounded-xl flex items-center justify-center overflow-hidden">
                   <img
-                   src={product.imageUrl}
+                   src={product.imageUrl[0]}
                     className="object-contain w-full h-full group-hover:scale-105 transition-transform"
                   />
                 </div>
